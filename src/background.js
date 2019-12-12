@@ -1,8 +1,5 @@
-import Vue from 'vue'
-import App from './App.vue'
+/**
+ * Background Page
+ */
 
-Vue.config.productionTip = false
-
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+console.log('Hello, I am background page!')
