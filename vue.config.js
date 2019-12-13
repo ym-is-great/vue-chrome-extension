@@ -2,6 +2,9 @@ const path = require('path')
 const AfterEmitPlugin = require('./src/webpack-utils/after-emit-plugin')
 
 module.exports = {
+  devServer: {
+    writeToDisk: true
+  },
   pages: {
     manifest: 'src/manifest.json',
     background: {
