@@ -9,7 +9,8 @@ const fs = require('fs')
 class AfterEmitPlugin {
   apply(compiler) {
     compiler.hooks.afterEmit.tap('AfterEmitPlugin', compilation => {
-      fs.unlinkSync('dist/manifest.html')
+      const outputPath = 'dist/manifest.html'
+      if (fs.existsSync(outputPath)) fs.unlinkSync(outputPath)
     })
   }
 }
